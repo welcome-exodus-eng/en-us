@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exódus® Web3 Wallet | Exódus® Browser Exténsion
+</title>
+    <meta name="description" content="Unlock the full potential of decentralized finance with Exódus wéb3 wallét. Access DeFi platforms, NFTs, and dApps effortlessly while maintaining complete control over your assets.">
+    <meta name="Exódus extension" content="Web3 Wallet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2A2E35;
+            --secondary: #3A3F47;
+            --accent: #FF6B6B;
+            --text: #E0E0E0;
+            --gradient: linear-gradient(135deg, #434343 0%, #2A2E35 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            padding: 1.5rem 5%;
+            background: rgba(42, 46, 53, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 5%;
+            background: radial-gradient(circle at center, var(--secondary), var(--primary));
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #FFF, #FF6B6B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #CCCCCC;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            background: var(--gradient);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .features {
+            padding: 5rem 5%;
+            background: var(--secondary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .news-section {
+            padding: 5rem 5%;
+        }
+
+        .news-card {
+            background: var(--secondary);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateX(10px);
+        }
+
+        footer {
+            background: var(--primary);
+            padding: 3rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Exódus Web</div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#news">News</a>
+            <a href="#download">Download</a>
+            <a href="#support">Support</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Gateway to Web3</h1>
+            <p>Exódus wéb3 wallét offers secure crypto management, staking, and trading with a sleek interface.</p>
+            <button class="cta-button">Download Wallet</button>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-paint-brush feature-icon"></i>
+                <h3>NFT Gallery 2.0</h3>
+                <p>Curate and display your NFT collection with our immersive 3D gallery viewer.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-exchange-alt feature-icon"></i>
+                <h3>Cross-Chain Swap</h3>
+                <p>Instant asset exchange across multiple blockchains with zero network fees.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt feature-icon"></i>
+                <h3>Zen Security</h3>
+                <p>Military-grade encryption combined with biometric authentication.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section" id="news">
+        <div class="news-card">
+            <h3>New: DAO Governance Dashboard</h3>
+            <p>Participate in decentralized governance directly from your wallet interface.</p>
+        </div>
+        <div class="news-card">
+            <h3>Multi-Chain Staking Live</h3>
+            <p>Earn rewards across 15+ proof-of-stake networks with single-click staking.</p>
+        </div>
+    </section>
+</html>
+<section class="content-section" id="about">
+    <div class="content-wrapper">
+        <h2>Why Choose Exódus wéb3 wallét?</h2>
+        <p class="intro-text">
+            The <strong>Exódus wéb3 wallét</strong> is your ultimate gateway to the decentralized future. Designed for both beginners and seasoned crypto enthusiasts, this wallet combines cutting-edge technology with a sleek, intuitive interface. Whether you're managing NFTs, swapping tokens, or staking assets, Exódus wéb3 wallét makes it effortless and secure.
+        </p>
+        <div class="content-grid">
+            <div class="content-block">
+                <h3>Seamless Multi-Chain Support</h3>
+                <p>
+                    The <strong>Exódus wéb3 wallét</strong> supports a wide range of blockchains, including Ethereum, Solana, Polygon, and more. With cross-chain compatibility, you can effortlessly manage all your digital assets in one place. No more switching between wallets—Exódus brings everything together.
+                </p>
+            </div>
+            <div class="content-block">
+                <h3>Enhanced Security</h3>
+                <p>
+                    Security is at the heart of the <strong>Exódus wéb3 wallét</strong>. With military-grade encryption, biometric authentication, and decentralized storage, your assets are always protected. Sleep easy knowing your crypto is safe from hacks and unauthorized access.
+                </p>
+            </div>
+            <div class="content-block">
+                <h3>NFT Management Made Easy</h3>
+                <p>
+                    Showcase and manage your NFT collection like never before. The <strong>Exódus wéb3 wallét</strong> features an immersive 3D gallery viewer, allowing you to curate and display your digital art with style. Buy, sell, and trade NFTs directly from your wallet.
+                </p>
+            </div>
+            <div class="content-block">
+                <h3>Staking and Earning</h3>
+                <p>
+                    Grow your crypto portfolio with the <strong>Exódus wéb3 wallét</strong>'s built-in staking features. Earn rewards on popular proof-of-stake networks like Solana, Cardano, and Cosmos. With just a few clicks, you can start earning passive income on your holdings.
+                </p>
+            </div>
+        </div>
+        <p class="closing-text">
+            The <strong>Exódus wéb3 wallét</strong> is more than just a wallet—it's your portal to the decentralized world. With its user-friendly design, robust security, and advanced features, Exódus empowers you to take control of your digital future. Download the Exódus wéb3 wallét today and experience the next generation of crypto management.
+        </p>
+    </div>
+</section>
